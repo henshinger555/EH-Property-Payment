@@ -8,7 +8,7 @@ RegisterCommand('paypropertymenu', function()
         {
             id = 'payment_menu',
             title = 'Payment for Properties',
-            menu = 'property+_pay_menu',
+            menu = 'property_pay_menu',
             options = {
             {
                 title = 'Property 1',
@@ -36,7 +36,7 @@ RegisterCommand('paypropertymenu', function()
         {
             id = 'payment_management',
             title = 'Payment Management',
-            menu = 'property+_pay_menu',
+            menu = 'property_pay_menu',
             options = {
                 {
                     title = 'Manage Clients',
@@ -109,6 +109,7 @@ RegisterCommand('paypropertymenu', function()
         clientMenu = {
             id = 'manage_client_menu',
             title = 'Manage Clients',
+            menu = 'payment_management'
             options = {
             {
                 title = 'Current Clients',
