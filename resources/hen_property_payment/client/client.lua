@@ -79,6 +79,8 @@ RegisterCommand('paypropertymenu', function()
                 metadata = {
                     {label = 'Payment Ammount  :', value = 40000},
                     {label = 'Amount Remaining :', value = 150000},
+                    {label = 'progress', progress = 50},
+
                 },
                 event = 'some_event',
                 args = {property_id = 1}
