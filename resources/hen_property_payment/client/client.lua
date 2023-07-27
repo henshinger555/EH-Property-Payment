@@ -40,12 +40,12 @@ RegisterCommand('paypropertymenu', function()
             options = {
                 {
                     title = 'Manage Clients',
-                    menu = 'client_management',
+                    menu = 'manage_client_menu',
                     description = 'Current list of Clients',
                 },
                 {
                     title = 'Funds Management',
-                    menu = 'funds_management',
+                    menu = 'funds_management_menu',
                     description = 'Manage Funds',
                     metadata = {
                         {label = 'Current Balance  :', value = 40000},
@@ -53,7 +53,7 @@ RegisterCommand('paypropertymenu', function()
                 },
                 {
                     title = 'Manage Staff',
-                    menu = 'staff_mangement',
+                    menu = 'staff_mangement_menu',
                     description = 'Current list of Clients',
                 },
             }
@@ -61,7 +61,7 @@ RegisterCommand('paypropertymenu', function()
         {
             id = 'current_clients',
             title = 'List of Current Clients',
-            menu = 'property+_pay_menu',
+            menu = 'payment_management',
             options = {
             {
                 title = 'Cletus Finch',
@@ -88,7 +88,7 @@ RegisterCommand('paypropertymenu', function()
     })
 
     local mainMenu = {
-        id = 'property+_pay_menu',
+        id = 'property_pay_menu',
         title = 'Property Payment',
         options = {
             {
@@ -127,7 +127,7 @@ RegisterCommand('paypropertymenu', function()
     lib.registerContext(mainMenu)
 
     
-    lib.showContext('current_clients')
+    lib.showContext('property_pay_menu')
 end)
 
 RegisterNetEvent('HenPropertyPayment:Client:AddClient', function(parm1)
@@ -144,7 +144,7 @@ RegisterNetEvent('HenPropertyPayment:Client:AddClient', function(parm1)
     print(json.encode(input, {indent=true}))
     print(json.encode(parm1, {indent=true}))
 
-    lib.showContext('property+_pay_menu')
+    lib.showContext('payment_management')
     
 end)
 
