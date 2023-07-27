@@ -171,6 +171,9 @@ RegisterNetEvent('some_event', function(parm1, parm2)
     
 end)
 
+--QB Core Specific Functions
+local QBCore = exports["qb-core"]:GetCoreObject()
+
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     local Player = QBCore.Functions.GetPlayer(source)
     print(Player.PlayerData.citizenid)
