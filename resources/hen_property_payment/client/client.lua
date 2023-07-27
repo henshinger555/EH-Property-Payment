@@ -125,6 +125,7 @@ RegisterCommand('paypropertymenu', function()
         }
     
     lib.registerContext(mainMenu)
+    lib.registerContext(clientMenu)
 
     
     lib.showContext('property_pay_menu')
