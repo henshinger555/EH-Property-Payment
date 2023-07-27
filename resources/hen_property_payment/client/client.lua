@@ -40,7 +40,7 @@ RegisterCommand('paypropertymenu', function()
                 metadata = {
                     {label = 'Payment Ammount  :', value = 40000},
                     {label = 'Amount Remaining :', value = 150000},
-                    {progress = 50},
+                    {label = '', progress = 50},
                 },
                 event = 'some_event',
                 args = {property_id = 1}
@@ -101,7 +101,7 @@ RegisterCommand('paypropertymenu', function()
         },
     })
     
-    lib.showContext('property+_pay_menu')
+    lib.showContext('payment_menu')
 end)
 
 
