@@ -101,7 +101,7 @@ RegisterCommand('paypropertymenu', function()
                 menu = 'payment_management',
                 description = 'Make payments for your properties',
             },
-        }
+        }}
     
     lib.registerContext(mainMenu)
 
