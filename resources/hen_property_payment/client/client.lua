@@ -15,7 +15,7 @@ RegisterCommand('paypropertymenu', function()
             },
             {
                 title = 'Payment Management',
-                menu = 'payment_mangement',
+                menu = 'payment_management',
                 description = 'Make payments for your properties',
             },
         },
