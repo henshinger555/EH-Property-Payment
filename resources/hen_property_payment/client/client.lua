@@ -115,7 +115,6 @@ RegisterCommand('paypropertymenu', function()
             },
             {
                 title = 'Add Client',
-                menu = 'payment_management',
                 description = 'Make payments for your properties',
                 event = 'HenPropertyPayment:Client:AddClient',
 
