@@ -26,7 +26,7 @@ RegisterCommand('paypropertymenu', function()
                 metadata = {
                     {label = 'Payment Ammount ', value = 40000},
                     {label = 'Amount Remaining', value = 150000},
-                    {label = nil, progress = 50},
+                    {label = 'progress', progress = 50},
                 },
                 event = 'some_event',
                 args = {property_id = 1}
@@ -39,7 +39,7 @@ RegisterCommand('paypropertymenu', function()
             menu = 'property+_pay_menu',
             options = {
                 {
-                    title = 'Current Clients',
+                    title = 'Manage Clients',
                     menu = 'client_management',
                     description = 'Current list of Clients',
                 },
@@ -59,8 +59,8 @@ RegisterCommand('paypropertymenu', function()
             }
         },
         {
-            id = 'client_management',
-            title = 'Management for Clients',
+            id = 'current_clients',
+            title = 'List of Current Clients',
             menu = 'property+_pay_menu',
             options = {
             {
@@ -101,12 +101,51 @@ RegisterCommand('paypropertymenu', function()
                 menu = 'payment_management',
                 description = 'Make payments for your properties',
             },
-        }}
+        }
+    }
+
+        clientMenu = {
+            id = 'manage_client_menu',
+            title = 'Manage Clients',
+            options = {
+            {
+                title = 'Current Clients',
+                menu = 'client_management',
+                description = 'Make payments for your properties',
+            },
+            {
+                title = 'Add Client',
+                menu = 'payment_management',
+                description = 'Make payments for your properties',
+                event = 'HenPropertyPayment:Client:AddClient',
+
+            },
+        }
+
+        }
     
     lib.registerContext(mainMenu)
 
     
-    lib.showContext('payment_menu')
+    lib.showContext('current_clients')
+end)
+
+RegisterNetEvent('HenPropertyPayment:Client:AddClient', function(parm1)
+
+    local input = lib.inputDialog('Client Information', {
+        { type = "input", label = "First Name" },
+        { type = "input", label = "Last Name" },
+        { type = "input", label = "Property"},
+        { type = "checkbox", label = "Rental" },
+        { type = "number", label = "Total Amount" },
+        { type = "number", label = "Payment Amount" },
+    })
+
+    print(json.encode(input, {indent=true}))
+    print(json.encode(parm1, {indent=true}))
+
+    lib.showContext('property+_pay_menu')
+    
 end)
 
 
