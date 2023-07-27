@@ -106,16 +106,12 @@ end)
 
 
 RegisterCommand('testinput', function()
-    local input = lib.inputDialog('Police locker', {
-        { type = "input", label = "Locker number" },
-        { type = "checkbox", label = "Some checkbox" },
-        { type = "input", label = "Locker PIN", password = true, icon = 'lock' },
-        { type = "checkbox", label = "Some other checkbox" },
-        { type = 'select', label = 'Value select', options = {
-            { value = 'option1', label = 'Option 1' },
-            { value = 'option2', label = 'Option 2' },
-            { value = 'option3', label = 'Option 3'},
-        }}
+    local input = lib.inputDialog('Client Information', {
+        { type = "input", label = "Client Name" },
+        { type = "input", label = "Property", password = true, icon = 'lock' },
+        { type = "checkbox", label = "Rental" },
+        { type = "number", label = "Total Ammount" },
+        { type = "number", label = "Payment Ammount" },
     })
     print(json.encode(input, {indent=true}))
 
