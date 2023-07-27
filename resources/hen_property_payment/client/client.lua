@@ -3,7 +3,7 @@
 --Global Variables
 
 
-RegisterCommand('payproperty', function()
+RegisterCommand('paypropertymenu', function()
     lib.registerContext({
         id = 'property+_pay_menu',
         title = 'Property Payment',
@@ -14,12 +14,10 @@ RegisterCommand('payproperty', function()
                 description = 'Make payments for your properties',
             },
             {
-                title = 'Event button',
-                description = 'Open a menu and send event data',
-                arrow = true,
-                event = 'some_event',
-                args = {value1 = 300, value2 = 'Other value'}
-            }
+                title = 'Payment Management',
+                menu = 'payment_mangement',
+                description = 'Make payments for your properties',
+            },
         },
         {
             id = 'payment_menu',
@@ -42,13 +40,67 @@ RegisterCommand('payproperty', function()
                 metadata = {
                     {label = 'Payment Ammount  :', value = 40000},
                     {label = 'Amount Remaining :', value = 150000},
+                    {progress = 50},
                 },
                 event = 'some_event',
                 args = {property_id = 1}
             },
             }
-        }
+        },
+        {
+            id = 'payment_management',
+            title = 'Payment Management',
+            menu = 'property+_pay_menu',
+            options = {
+                {
+                    title = 'Current Clients',
+                    menu = 'client_mangement',
+                    description = 'Current list of Clients',
+                },
+                {
+                    title = 'Funds Management',
+                    menu = 'funds_management',
+                    description = 'Manage Funds',
+                    metadata = {
+                        {label = 'Current Balance  :', value = 40000},
+                    },
+                },
+                {
+                    title = 'Manage Staff',
+                    menu = 'staff_mangement',
+                    description = 'Current list of Clients',
+                },
+            }
+        },
+        {
+            id = 'client_mangement',
+            title = 'Management for Clients',
+            menu = 'property+_pay_menu',
+            options = {
+            {
+                title = 'Cletus Finch,
+                description = 'Pink Cage #3',
+                metadata = {
+                    {label = 'Payment Ammount  :', value = 4000},
+                    {label = 'Amount Remaining :', value = 'Rented'},
+                },
+                event = 'some_event',
+                args = {property_id = 0}
+            },
+            {
+                title = 'Cobra Cobretti',
+                description = 'Mirror Park House Address',
+                metadata = {
+                    {label = 'Payment Ammount  :', value = 40000},
+                    {label = 'Amount Remaining :', value = 150000},
+                },
+                event = 'some_event',
+                args = {property_id = 1}
+            },
+            }
+        },
     })
+    
     lib.showContext('property+_pay_menu')
 end)
 
