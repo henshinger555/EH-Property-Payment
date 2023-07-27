@@ -5,20 +5,6 @@
 
 RegisterCommand('paypropertymenu', function()
     lib.registerContext({
-        id = 'property+_pay_menu',
-        title = 'Property Payment',
-        options = {
-            {
-                title = 'Pay Properties',
-                menu = 'payment_menu',
-                description = 'Make payments for your properties',
-            },
-            {
-                title = 'Payment Management',
-                menu = 'payment_management',
-                description = 'Make payments for your properties',
-            },
-        },
         {
             id = 'payment_menu',
             title = 'Payment for Properties',
