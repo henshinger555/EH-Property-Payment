@@ -176,7 +176,7 @@ local QBCore = exports["qb-core"]:GetCoreObject()
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     local Player = QBCore.Functions.GetPlayerData()
-    print(json.encode(player, {indent=true}))
+print(json.encode(Player, {indent=true}))
 
 end)
 
