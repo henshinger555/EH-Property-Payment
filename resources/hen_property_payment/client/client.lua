@@ -108,10 +108,10 @@ end)
 RegisterCommand('testinput', function()
     local input = lib.inputDialog('Client Information', {
         { type = "input", label = "Client Name" },
-        { type = "input", label = "Property", password = true, icon = 'lock' },
+        { type = "input", label = "Property"},
         { type = "checkbox", label = "Rental" },
-        { type = "number", label = "Total Ammount" },
-        { type = "number", label = "Payment Ammount" },
+        { type = "number", label = "Total Amount" },
+        { type = "number", label = "Payment Amount" },
     })
     print(json.encode(input, {indent=true}))
 
