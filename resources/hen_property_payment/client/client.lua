@@ -86,6 +86,25 @@ RegisterCommand('paypropertymenu', function()
             }
         },
     })
+
+    local mainMenu = {
+        id = 'property+_pay_menu',
+        title = 'Property Payment',
+        options = {
+            {
+                title = 'Pay Properties',
+                menu = 'payment_menu',
+                description = 'Make payments for your properties',
+            },
+            {
+                title = 'Payment Management',
+                menu = 'payment_management',
+                description = 'Make payments for your properties',
+            },
+        }
+    
+    lib.registerContext(mainMenu)
+
     
     lib.showContext('payment_menu')
 end)
