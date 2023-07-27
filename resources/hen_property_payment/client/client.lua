@@ -59,7 +59,7 @@ RegisterCommand('paypropertymenu', function()
             }
         },
         {
-            id = 'current_clients',
+            id = 'current_clients_menu',
             title = 'List of Current Clients',
             menu = 'payment_management',
             options = {
@@ -110,7 +110,7 @@ RegisterCommand('paypropertymenu', function()
             options = {
             {
                 title = 'Current Clients',
-                menu = 'client_management',
+                menu = 'current_clients_menu',
                 description = 'Make payments for your properties',
             },
             {
