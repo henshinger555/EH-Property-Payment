@@ -54,7 +54,7 @@ RegisterCommand('paypropertymenu', function()
             options = {
                 {
                     title = 'Current Clients',
-                    menu = 'client_mangement',
+                    menu = 'client_management',
                     description = 'Current list of Clients',
                 },
                 {
@@ -73,12 +73,12 @@ RegisterCommand('paypropertymenu', function()
             }
         },
         {
-            id = 'client_mangement',
+            id = 'client_management',
             title = 'Management for Clients',
             menu = 'property+_pay_menu',
             options = {
             {
-                title = 'Cletus Finch,
+                title = 'Cletus Finch',
                 description = 'Pink Cage #3',
                 metadata = {
                     {label = 'Payment Ammount  :', value = 4000},
