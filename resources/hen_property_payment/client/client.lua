@@ -89,15 +89,15 @@ RegisterCommand('paypropertymenu', function()
         },
     })
 
-    local mainMenu = {
-        id = 'property_pay_menu',
-        title = 'Property Payment',
-        options = {
-            {
-                title = 'Pay Properties',
-                menu = 'payment_menu',
-                description = 'Make payments for your properties',
-            },
+    mainMenu = {
+      id = 'property_pay_menu',
+      title = 'Property Payment',
+      options = {
+        {
+          title = 'Pay Properties',
+          menu = 'payment_menu',
+          description = 'Make payments for your properties',
+        },
             {
                 title = 'Payment Management',
                 menu = 'payment_management',
@@ -106,10 +106,11 @@ RegisterCommand('paypropertymenu', function()
         }
     }
 
-        clientMenu = {
+
+    clientMenu = {
             id = 'manage_client_menu',
             title = 'Manage Clients',
-            menu = 'payment_management'
+            menu = 'payment_management',
             options = {
             {
                 title = 'Current Clients',
@@ -123,8 +124,7 @@ RegisterCommand('paypropertymenu', function()
 
             },
         }
-
-        }
+    }
     
     lib.registerContext(mainMenu)
     lib.registerContext(clientMenu)
