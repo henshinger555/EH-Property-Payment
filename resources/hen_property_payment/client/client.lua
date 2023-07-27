@@ -24,9 +24,9 @@ RegisterCommand('paypropertymenu', function()
                 title = 'Property 2',
                 description = 'Mirror Park House',
                 metadata = {
-                    {label = 'Payment Ammount  :', value = 40000},
-                    {label = 'Amount Remaining :', value = 150000},
-                    {label = '', progress = 50},
+                    {label = 'Payment Ammount ', value = 40000},
+                    {label = 'Amount Remaining', value = 150000},
+                    {label = nil, progress = 50},
                 },
                 event = 'some_event',
                 args = {property_id = 1}
@@ -112,7 +112,8 @@ end)
 
 RegisterCommand('testinput', function()
     local input = lib.inputDialog('Client Information', {
-        { type = "input", label = "Client Name" },
+        { type = "input", label = "First Name" },
+        { type = "input", label = "Last Name" },
         { type = "input", label = "Property"},
         { type = "checkbox", label = "Rental" },
         { type = "number", label = "Total Amount" },
